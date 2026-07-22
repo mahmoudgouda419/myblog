@@ -26,7 +26,7 @@
   --color-2: #cfcfcf;
   --color-3: #9d9d9d;
   --lines: #6c6a66;
-  --accent: #d2b48c;
+  --accent: #dfd6c7;
   --nav-color: #151515;
 }
 .theme-toggle {
@@ -625,3 +625,4 @@ footer {
     flex-wrap: wrap;
   }
 }
+
