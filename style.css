@@ -11,12 +11,37 @@
   --color: #1a1814;
   --color-2: #6e6c66;
   --color-3: #9e9d9a;
-  --rule: #d8d4cc;
+  --lines: #ccccc8;
   --accent: #535353;
   --serif: "EB Garamond", Georgia, serif;
   --sans: "Instrument Sans", system-ui, sans-serif;
   --max: 1180px;
   --col: clamp(20px, 5vw, 64px);
+  --nav-color: #f4f3f1;
+}
+[data-theme="dark"] {
+  --bg: #121212;
+  --bg-warm: #1b1b1b;
+  --color: #f5f5f5;
+  --color-2: #cfcfcf;
+  --color-3: #9d9d9d;
+  --lines: #6c6a66;
+  --accent: #d2b48c;
+  --nav-color: #151515;
+}
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--lines);
+  color: var(--color);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s;
+  font-size: 18px;
+}
+.theme-toggle:hover {
+  background: var(--bg-warm);
 }
 html {
   background: var(--bg);
@@ -36,9 +61,9 @@ nav {
   left: 0;
   right: 0;
   z-index: 200;
-  background: rgba(248, 246, 241, 0.94);
+  background: var(--nav-color);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--lines);
   transition: border-color 0.3s;
 }
 nav a {
@@ -182,7 +207,7 @@ nav a {
   opacity: 0;
 }
 .hero-card {
-  border: 1px solid var(--rule);
+  border: 1px solid var(--lines);
   padding: 36px;
   background: var(--bg-warm);
 }
@@ -234,7 +259,7 @@ nav a {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-3);
-  border: 1px solid var(--rule);
+  border: 1px solid var(--lines);
   padding: 4px 9px;
 }
 .hc-time {
@@ -245,7 +270,7 @@ nav a {
   font-size: 12px;
   font-weight: 500;
   color: var(--color);
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--lines);
   padding-top: 20px;
   cursor: pointer;
   display: flex;
@@ -261,7 +286,7 @@ nav a {
 }
 hr.div {
   border: none;
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--lines);
 }
 
 .section-head {
@@ -289,13 +314,13 @@ hr.div {
   align-items: start;
   gap: 32px;
   padding: 28px 0;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--lines);
   cursor: pointer;
   text-decoration: none;
   color: inherit;
 }
 .essay-item:first-child {
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--lines);
 }
 .essay-item:hover .essay-title {
   color: var(--accent);
@@ -345,7 +370,7 @@ hr.div {
 }
 .essay-arrow {
   font-size: 15px;
-  color: var(--rule);
+  color: var(--lines);
   transition:
           color 0.2s,
           transform 0.2s;
@@ -439,7 +464,7 @@ footer {
   top: 0;
   background: rgba(248, 246, 241, 0.96);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--lines);
   padding: 0 var(--col);
   height: 54px;
   display: flex;
@@ -474,7 +499,7 @@ footer {
   text-transform: uppercase;
   color: var(--color-3);
   background: none;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--lines);
   padding: 5px 13px;
   cursor: pointer;
   transition: all 0.2s;
@@ -505,7 +530,7 @@ footer {
   letter-spacing: 0px;
   margin-bottom: 32px;
   padding-bottom: 32px;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--lines);
 }
 .modal-title em {
   font-style: italic;
@@ -532,7 +557,7 @@ footer {
 .modal-content blockquote {
   margin: 36px 0;
   padding-left: 24px;
-  border-left: 2px solid var(--rule);
+  border-left: 2px solid var(--lines);
   font-style: italic;
   font-size: clamp(18px, 1.45vw, 20px);
   color: var(--color-3);
@@ -545,7 +570,7 @@ footer {
 .modal-content .sb {
   text-align: center;
   margin: 36px 0;
-  color: var(--rule);
+  color: var(--lines);
   letter-spacing: 8px;
   font-size: 11px;
   font-family: var(--sans);
