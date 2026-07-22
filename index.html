@@ -22,7 +22,9 @@
         <div class="nav-right">
           <a class="nav-link" href="#essays">Articles</a>
           <a class="nav-link" href="#about">About</a>
-
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="fa-solid fa-sun"></i>
+          </button>
         </div>
       </div>
     </nav>
@@ -56,7 +58,7 @@
             <span class="hc-tag">Apr 2025</span>
             <span class="hc-time">8 min read</span>
           </div>
-          <div class="hc-read" onclick="openArticle('space')">
+          <div class="hc-read" onclick="openArticle('lasthope')">
             Read full essay
           </div>
         </div>
@@ -73,7 +75,7 @@
 
       </div>
       <div class="essay-list">
-        <a class="essay-item reveal" onclick="openArticle('space')" href="#" id="#frist">
+        <a class="essay-item reveal" onclick="openArticle('lasthope')" href="#" id="#frist">
           <div class="essay-left">
             <span class="essay-kicker">Science Fiction</span>
             <h3 class="essay-title">The Last Hope of Earth</h3>
@@ -88,7 +90,7 @@
             <span class="essay-arrow">→</span>
           </div>
         </a>
-        <a class="essay-item reveal" onclick="openArticle('ai')" href="#">
+        <a class="essay-item reveal" onclick="openArticle('physics')" href="#">
           <div class="essay-left">
             <span class="essay-kicker">Physics & History</span>
             <h3 class="essay-title">The History of Physics</h3>
@@ -101,11 +103,11 @@
           </div>
           <div class="essay-right">
             <span class="essay-date">Mar 2025</span>
-            <span class="essay-mins">9 min</span>
+            <span class="essay-mins">3 min</span>
             <span class="essay-arrow">→</span>
           </div>
         </a>
-        <a class="essay-item reveal" onclick="openArticle('type')" href="#">
+        <a class="essay-item reveal" onclick="openArticle('calc')" href="#">
           <div class="essay-left">
             <span class="essay-kicker">Calculus</span>
             <h3 class="essay-title">The Calculus War</h3>
@@ -120,7 +122,7 @@
             <span class="essay-arrow">→</span>
           </div>
         </a>
-        <a class="essay-item reveal" onclick="openArticle('dark')" href="#">
+        <a class="essay-item reveal" onclick="openArticle('hackclub')" href="#">
           <div class="essay-left">
             <span class="essay-kicker">Programming</span>
             <h3 class="essay-title">GitHub X Hack Club</h3>
@@ -134,7 +136,7 @@
             <span class="essay-arrow">→</span>
           </div>
         </a>
-        <a class="essay-item reveal" onclick="openArticle('future')" href="#">
+        <a class="essay-item reveal" onclick="openArticle('electrons')" href="#">
           <div class="essay-left">
             <span class="essay-kicker">Quantum Physics</span>
             <h3 class="essay-title">Why Electrons Don't Orbit the Nucleus Like Planets</h3>
@@ -148,7 +150,7 @@
             <span class="essay-arrow">→</span>
           </div>
         </a>
-        <a class="essay-item reveal" onclick="openArticle('future')" href="#">
+        <a class="essay-item reveal" onclick="openArticle('threejs')" href="#">
           <div class="essay-left">
             <span class="essay-kicker">Web Development</span>
             <h3 class="essay-title">From Flat Pages to Interactive Worlds: Learning Three.js</h3>
@@ -158,7 +160,7 @@
           </div>
           <div class="essay-right">
             <span class="essay-date">Jul 2026</span>
-            <span class="essay-mins">6 min</span>
+            <span class="essay-mins">12 min</span>
             <span class="essay-arrow">→</span>
           </div>
         </a>
@@ -221,11 +223,11 @@
       gsap.registerPlugin(ScrollTrigger);
 
       const articles = {
-        space: {
+        lasthope: {
           k: "Science Fiction · Aug 2025 · 8 min read",
           t: "The Last Hope of <em>Earth</em>",
           b: `
-    <p><strong>The WWWIV</strong> was a very tragic war; more than half of the world's population died, most astronomers were injured, and all space agencies were destroyed. There were no governments, no countries, and no humanitarian organizations. The world looked as if it had returned to 2000 BC.</p>
+    <p><strong>The WWWIV</strong> was a very tragic war; more than half of the world's population died, most astronomers were injured, and all lasthope agencies were destroyed. There were no governments, no countries, and no humanitarian organizations. The world looked as if it had returned to 2000 BC.</p>
 
     <p>After the war ended, the survivors tried to rebuild their lives and find food, only to discover that animals, plants, and crops had become contaminated by radiation from the countless nuclear bombs that had been dropped. They searched desperately for alternatives, including artificial food, but every attempt failed.</p>
 
@@ -256,7 +258,7 @@
     <blockquote>It wasn't just a spacecraft. It was humanity's last hope.</blockquote>
   `,
         },
-        ai: {
+        physics: {
           k: "Physics · Jul 2026 · 8 min read",
           t: "How <em>Physics</em> Changed Our Understanding of Motion",
           b: `
@@ -281,7 +283,7 @@
     <p>Today, these principles explain everything from the motion of planets to the operation of cars, airplanes, and spacecraft. Physics is not only a subject to study—it is the language that describes how the universe works.</p>
   `,
         },
-        type: {
+        calc: {
           k: "Science · Jul 2026 · 12 min read",
           t: "The Calculus War: Inside the Pettiest Feud in Scientific History",
           b: `
@@ -326,7 +328,7 @@
     <p>The Calculus War reminds us that even the greatest scientific discoveries are made by humans—with all their brilliance, ambition, and imperfections.</p>
   `,
         },
-        dark: {
+        hackclub: {
           k: "Programming · Jan 2026 · 5 min read · Writtin By Priyanka Jain ",
           t: "GitHub × Hack Club: Why <em>Flavortown</em> Is the Most Important Event for Teen Developers",
           b: `
@@ -395,7 +397,7 @@
     <p>Whether you're an experienced developer or just beginning your programming journey, Flavortown is one of the best opportunities to practice your skills, meet other makers, and build something meaningful.</p>
   `,
         },
-        future: {
+        electrons: {
           k: "Physics · Jul 2026 · 5 min read",
           t: "Why Electrons Don't Orbit the Nucleus Like Planets",
           b: `<p>One of the first models of the atom shows electrons orbiting the nucleus like tiny planets around the Sun. It's a useful picture for beginners, but it isn't how nature actually works. In reality, electrons don't follow neat circular paths, and understanding why opens the door to one of the biggest ideas in modern physics.</p>
@@ -457,7 +459,7 @@
 
 <p>The next time you see the familiar picture of electrons circling a nucleus, remember that it is only a simplified model. The real atom is far more fascinating: a world where matter behaves like waves, probabilities replace certainty, and the structure of everything around us emerges from the rules of quantum mechanics.</p>`,
         },
-        slow: {
+        threejs: {
           k: "Web Development · Jul 2026 · 6 min read",
           t: "From Flat Pages to Interactive Worlds: <em>Three.js</em>",
           b: `<p>There was a time when websites were expected to do one thing: display information. A clean layout, readable text, and maybe a few animations were enough to create a good experience. Today, expectations are different. Users interact with products before buying them, explore virtual environments inside their browser, and scroll through portfolios that feel closer to video games than traditional websites.</p>
@@ -564,7 +566,6 @@
         },
       };
 
-      // Hero
       const tl = gsap.timeline({ delay: 0.1 });
       tl.to("#hk", { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 0)
         .to(
@@ -587,8 +588,6 @@
           { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
           0.18,
         );
-
-      // Reveals
       gsap.utils.toArray(".reveal").forEach((el) => {
         gsap.to(el, {
           opacity: 1,
@@ -598,8 +597,6 @@
           scrollTrigger: { trigger: el, start: "top 91%", once: true },
         });
       });
-
-      // Essay stagger
       gsap.utils.toArray(".essay-item").forEach((el, i) => {
         gsap.fromTo(
           el,
@@ -614,8 +611,6 @@
           },
         );
       });
-
-      // Modal
       function openArticle(key) {
         const a = articles[key];
         if (!a) return;
@@ -648,7 +643,6 @@
         }
       }
 
-      // Prevent default on links
       document
         .querySelectorAll(".essay-item")
         .forEach((el) =>
@@ -661,8 +655,23 @@
         );
 
 
-
-
+      const themebtn = document.getElementById("theme-toggle");
+      const savedTheme = localStorage.getItem("theme") || "dark";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+      themebtn.innerHTML =
+              savedTheme === "light"
+                      ? '<i class="fa-solid fa-moon"></i>'
+                      : '<i class="fa-solid fa-sun"></i>';
+      themebtn.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme");
+        const next = current === "light" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+        themebtn.innerHTML =
+                next === "light"
+                        ? '<i class="fa-solid fa-moon"></i>'
+                        : '<i class="fa-solid fa-sun"></i>';
+      });
     </script>
   </body>
 </html>
