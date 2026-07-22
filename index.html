@@ -170,7 +170,9 @@
     <hr class="div" />
 
     <div class="roadmap-container">
-      <div class = "roadmap-line"></div>
+      <div class = "roadmap-line">
+        <div class="progress"></div>
+      </div>
       <div class = "roadmap-section" id="first">
         <h2 class="roadmap-title">Why You Should Improve Your Writting Skils</h2>
         <p>
@@ -306,7 +308,7 @@
     <footer>
       <div class="footer-inner">
         <span class="footer-logo">Mahmoud Gouda</span>
-        <span class="footer-copy">© 2025 — All rights reserved</span>
+        <span class="footer-copy">© 2026 — All rights reserved</span>
       </div>
     </footer>
 
@@ -775,6 +777,17 @@
                 next === "light"
                         ? '<i class="fa-solid fa-moon"></i>'
                         : '<i class="fa-solid fa-sun"></i>';
+      });
+
+      gsap.to(".progress", {
+        height: "100%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".roadmap-container",
+          start: "top center",
+          end: "bottom center",
+          scrub: true
+        }
       });
     </script>
 
