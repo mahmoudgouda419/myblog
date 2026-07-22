@@ -672,6 +672,10 @@ footer {
   margin-bottom: 10px;
 }
 .roadmap-section p:last-child {
-
   margin-bottom: 0px;
+}
+.roadmap-container h1 {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 38px;
 }
