@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahmoud - Writer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Instrument+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="rp"></div>
+
+    <nav>
+      <div class="nav-inner">
+        <a class="nav-logo" href="#">Mahmoud Gouda</a>
+        <div class="nav-right">
+          <a class="nav-link" href="#essays">Articles</a>
+          <a class="nav-link" href="#about">About</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-left">
+        <p class="hero-kicker" id="hk">Essays, Articles, and notes</p>
+        <h1 class="hero-title" id="ht">
+          Just thoughts,<br />
+          <em>nothing more</em>
+        </h1>
+        <p class="hero-desc" id="hd">
+          I don't promise answers. Only an honest look into what's on my mind.
+        </p>
+        <div class="hero-actions" id="ha">
+          <a class="btn-primary" href="#essays">Read</a>
+          <a class="btn-text" href="#about">About me</a>
+        </div>
+      </div>
+      <div class="hero-right" id="hc">
+        <div class="hero-card">
+          <div class="hc-label">Science Fiction</div>
+          <h2 class="hc-title" onclick="openArticle('earth')">
+            The Last Hope of Earth
+          </h2>
+          <p class="hc-excerpt">
+            The Earth is dying. Governments are gone. One aerospace student believes
+            humanity's future no longer belongs on this planet.
+          </p>
+          <div class="hc-meta">
+            <span class="hc-tag">Apr 2025</span>
+            <span class="hc-time">8 min read</span>
+          </div>
+          <div class="hc-read" onclick="openArticle('space')">
+            Read full essay
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="div" />
+
+
+
+    <section id="essays">
+      <div class="section-head reveal">
+        <h2 class="section-title">Some of the Articles in My Interests</h2>
+
+      </div>
+      <div class="essay-list">
+        <a class="essay-item reveal" onclick="openArticle('space')" href="#" id="#frist">
+          <div class="essay-left">
+            <span class="essay-kicker">Science Fiction</span>
+            <h3 class="essay-title">The Last Hope of Earth</h3>
+            <p class="essay-excerpt">
+              The Earth is dying. Governments are gone. One aerospace student
+              believes humanity's future no longer belongs on this planet.
+            </p>
+          </div>
+          <div class="essay-right">
+            <span class="essay-date">Apr 2025</span>
+            <span class="essay-mins">8 min</span>
+            <span class="essay-arrow">→</span>
+          </div>
+        </a>
+        <a class="essay-item reveal" onclick="openArticle('ai')" href="#">
+          <div class="essay-left">
+            <span class="essay-kicker">Physics & History</span>
+            <h3 class="essay-title">The History of Physics</h3>
+            <p class="essay-excerpt">
+              <em
+                >How do objects move? How does electricity work? What is light
+                made of?</em
+              >
+            </p>
+          </div>
+          <div class="essay-right">
+            <span class="essay-date">Mar 2025</span>
+            <span class="essay-mins">9 min</span>
+            <span class="essay-arrow">→</span>
+          </div>
+        </a>
+        <a class="essay-item reveal" onclick="openArticle('type')" href="#">
+          <div class="essay-left">
+            <span class="essay-kicker">Calculus</span>
+            <h3 class="essay-title">The Calculus War</h3>
+            <p class="essay-excerpt">
+              We like to imagine the pioneers of modern science as serene, noble
+              minds who spent their days staring out of ivy-covered windows…
+            </p>
+          </div>
+          <div class="essay-right">
+            <span class="essay-date">Feb 2026</span>
+            <span class="essay-mins">4 min</span>
+            <span class="essay-arrow">→</span>
+          </div>
+        </a>
+        <a class="essay-item reveal" onclick="openArticle('dark')" href="#">
+          <div class="essay-left">
+            <span class="essay-kicker">Programming</span>
+            <h3 class="essay-title">GitHub X Hack Club</h3>
+            <p class="essay-excerpt">
+              Why Flavortown Is The Most Important Event For Teen Devs Right Now
+            </p>
+          </div>
+          <div class="essay-right">
+            <span class="essay-date">Jan 2025</span>
+            <span class="essay-mins">5 min</span>
+            <span class="essay-arrow">→</span>
+          </div>
+        </a>
+        <a class="essay-item reveal" onclick="openArticle('future')" href="#">
+          <div class="essay-left">
+            <span class="essay-kicker">Quantum Physics</span>
+            <h3 class="essay-title">Why Electrons Don't Orbit the Nucleus Like Planets</h3>
+            <p class="essay-excerpt">
+              Every textbook draws electrons orbiting the nucleus like tiny planets, but reality is far stranger. Discover how wavefunctions, standing waves, and the uncertainty principle keep atoms stable.
+            </p>
+          </div>
+          <div class="essay-right">
+            <span class="essay-date">Dec 2024</span>
+            <span class="essay-mins">8 min</span>
+            <span class="essay-arrow">→</span>
+          </div>
+        </a>
+        <a class="essay-item reveal" onclick="openArticle('future')" href="#">
+          <div class="essay-left">
+            <span class="essay-kicker">Web Development</span>
+            <h3 class="essay-title">From Flat Pages to Interactive Worlds: Learning Three.js</h3>
+            <p class="essay-excerpt">
+              Discover how Three.js transforms ordinary websites into immersive 3D experiences, from your first rotating cube to interactive worlds rendered directly in the browser.
+            </p>
+          </div>
+          <div class="essay-right">
+            <span class="essay-date">Jul 2026</span>
+            <span class="essay-mins">6 min</span>
+            <span class="essay-arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <hr class="div" />
+
+    <section id="about">
+      <div class="about-section">
+        <div><p class="about-label reveal">About</p></div>
+
+        <div class="about-body">
+          <h2 class="reveal">
+            I'm Mahmoud Gouda
+          </h2>
+
+          <p class="reveal">
+            I'm a STEM student, web developer, and physics enthusiast who enjoys
+            building projects that combine creativity with technology.
+          </p>
+
+          <p class="reveal">
+            When I'm not coding, you'll usually find me exploring physics,
+            writing technical articles, or
+            experimenting with new technologies. I believe the best way to learn is by building things that
+            solve real problems.
+          </p>
+
+          <a class="btn-primary reveal" href="https://github.com/mahmoudgouda419">
+            Explore my work →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="div" />
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-logo">Mahmoud Gouda</span>
+        <span class="footer-copy">© 2025 — All rights reserved</span>
+      </div>
+    </footer>
+
+
+    <div class="modal" id="modal">
+      <nav class="modal-nav">
+        <button class="modal-back" onclick="closeArticle()">
+          Back to essays
+        </button>
+        <button class="modal-share" id="share-btn" onclick="shareArticle()">
+          Share
+        </button>
+      </nav>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const articles = {
+        space: {
+          k: "Science Fiction · Aug 2025 · 8 min read",
+          t: "The Last Hope of <em>Earth</em>",
+          b: `
+    <p><strong>The WWWIV</strong> was a very tragic war; more than half of the world's population died, most astronomers were injured, and all space agencies were destroyed. There were no governments, no countries, and no humanitarian organizations. The world looked as if it had returned to 2000 BC.</p>
+
+    <p>After the war ended, the survivors tried to rebuild their lives and find food, only to discover that animals, plants, and crops had become contaminated by radiation from the countless nuclear bombs that had been dropped. They searched desperately for alternatives, including artificial food, but every attempt failed.</p>
+
+    <div class="sb">· · ·</div>
+
+    <p>At the same time, there was a young man named <strong>Auron</strong>. Before the war, he had been an Aerospace Engineering student. Unlike everyone else, Auron believed that Earth could never truly recover. To him, rebuilding civilization on a poisoned world was like trying to turn ashes back into fire.</p>
+
+    <blockquote>"Perhaps the future of humanity is no longer on Earth."</blockquote>
+
+    <p>Instead of trying to save the planet, he decided to search for another one. His dream was simple but impossible: to find a world with fresh water, fertile soil, and breathable air—the basic conditions for life.</p>
+
+    <p>Using primitive tools and salvaged materials, Auron began building a telescope from scratch. Every piece he crafted felt like another step toward the stars. After weeks of work, he climbed a mountain, pointed the telescope at the night sky, and searched endlessly for a new home.</p>
+
+    <p>Then, after days of observation, he noticed a faint light in the darkness.</p>
+
+    <blockquote>Maybe... this was humanity's second chance.</blockquote>
+
+    <p>The next challenge was far greater: building a spacecraft. He searched abandoned cities, crossed deserts, and explored the ruins of forgotten nations in search of usable materials. Most of what he found had already been destroyed.</p>
+
+    <div class="sb">· · ·</div>
+
+    <p>Then everything changed.</p>
+
+    <p>Hidden within the side of a mountain stood an enormous steel door engraved with the words <strong>"Nuclear Shelter."</strong> After discovering a small switch buried beneath the dust, the giant door slowly opened.</p>
+
+    <p>Inside rested a massive spacecraft equipped with technology far beyond anything Auron had ever imagined. Capable of traveling at more than one million kilometers per hour, it was more than a miracle.</p>
+
+    <blockquote>It wasn't just a spacecraft. It was humanity's last hope.</blockquote>
+  `,
+        },
+        ai: {
+          k: "Physics · Jul 2026 · 8 min read",
+          t: "How <em>Physics</em> Changed Our Understanding of Motion",
+          b: `
+    <p><strong>Physics</strong> is the science that studies matter, energy, motion, and the interactions between them. It helps answer many questions about the world around us, such as: <em>How do objects move? How does electricity work? What is light made of?</em> Physics is everywhere and plays an essential role in many of humanity's greatest inventions.</p>
+
+    <p>The study of physics began more than <strong>2,000 years ago</strong> in <strong>Ancient Greece</strong>. Philosophers such as <strong>Aristotle</strong> developed early theories about nature and motion. Aristotle believed that everything was made of four elements: <strong>earth, water, air, and fire</strong>. He thought that heavy objects fell because they naturally sought the center of the Earth, and that a continuous force was needed to keep an object moving. These ideas dominated scientific thinking for over <strong>1,000 years</strong>.</p>
+
+    <blockquote>Science advances by questioning ideas that were once accepted as facts.</blockquote>
+
+    <p>Everything changed during the Scientific Revolution. <strong>Galileo Galilei</strong> challenged Aristotle's theories through observation and experimentation. According to tradition, he demonstrated that, in the absence of air resistance, objects fall with the same acceleration regardless of their mass. This principle laid the foundation for modern mechanics.</p>
+
+    <div class="sb">· · ·</div>
+
+    <p><strong>Isaac Newton</strong> later formulated the <strong>three laws of motion</strong>, which transformed our understanding of how objects move.</p>
+
+    <p><strong>First Law (Law of Inertia):</strong> An object remains at rest or continues moving at a constant velocity unless acted upon by a net external force.</p>
+
+    <p><strong>Second Law:</strong> <em>F = ma</em>. The acceleration of an object increases as the applied force increases, provided its mass remains constant.</p>
+
+    <p><strong>Third Law:</strong> For every action, there is an equal and opposite reaction. For example, when a rocket pushes exhaust gases downward, the gases push the rocket upward with an equal force.</p>
+
+    <p>Today, these principles explain everything from the motion of planets to the operation of cars, airplanes, and spacecraft. Physics is not only a subject to study—it is the language that describes how the universe works.</p>
+  `,
+        },
+        type: {
+          k: "Science · Jul 2026 · 12 min read",
+          t: "The Calculus War: Inside the Pettiest Feud in Scientific History",
+          b: `
+    <p>We like to imagine the pioneers of modern science as serene, noble minds who spent their days contemplating the laws of the universe. History tells a different story. The birth of modern mathematics was shaped by one of the greatest rivalries in scientific history.</p>
+
+    <blockquote>The greatest mathematical breakthrough of the century became a battle over who deserved the credit.</blockquote>
+
+    <p>At the center of the dispute were <strong>Sir Isaac Newton</strong> and <strong>Gottfried Wilhelm Leibniz</strong>, two brilliant mathematicians who independently developed calculus. Both solved the same fundamental problem: how to describe quantities that change continuously, such as the motion of planets or the acceleration of a falling object.</p>
+
+    <h3>The Two Inventors</h3>
+
+    <p>During the seventeenth century, mathematics struggled to describe continuous change. Newton and Leibniz each developed a completely new mathematical framework capable of solving these problems. Although their methods were different, the ideas were remarkably similar.</p>
+
+    <p><strong>Newton</strong> developed what he called the <em>Method of Fluxions</em> in the mid-1660s. However, fearing criticism, he chose not to publish his methods for many years and instead used them privately while writing his famous work, <em>Principia</em>.</p>
+
+    <p><strong>Leibniz</strong>, unaware of Newton's unpublished work, independently developed calculus during the 1670s. Unlike Newton, he published his discoveries in 1684 and introduced the notation we still use today, including <em>dx</em>, <em>dy</em>, and the integral symbol <strong>∫</strong>.</p>
+
+    <div class="sb">· · ·</div>
+
+    <h3>From Mathematics to Personal Conflict</h3>
+
+    <p>The disagreement soon evolved into a fierce dispute over who had invented calculus first. Newton's supporters accused Leibniz of copying unpublished ideas, while Leibniz strongly denied every accusation.</p>
+
+    <blockquote>Scientific disagreement soon became personal, political, and deeply competitive.</blockquote>
+
+    <p>When Leibniz appealed to the Royal Society of London for an impartial investigation, the situation became even more controversial. Newton, who was serving as President of the Royal Society, selected the committee responsible for reviewing the case.</p>
+
+    <p>Even more remarkably, Newton secretly wrote much of the committee's final report himself. Unsurprisingly, the report declared Newton the true inventor of calculus and accused Leibniz of plagiarism.</p>
+
+    <h3>The Consequences</h3>
+
+    <p>The conflict divided European mathematics for decades. British mathematicians remained loyal to Newton's notation, while continental Europe adopted Leibniz's clearer notation. Because of this, British mathematics gradually fell behind much of Europe.</p>
+
+    <p>Leibniz died in 1716 with his reputation still under attack, while Newton continued defending his own claims until the end of his life.</p>
+
+    <div class="sb">· · ·</div>
+
+    <h3>The Modern View</h3>
+
+    <p>Today, historians agree that both men independently discovered calculus. Newton developed the fundamental ideas earlier, but Leibniz independently reached similar conclusions and introduced the notation that remains the international standard in mathematics.</p>
+
+    <p>The Calculus War reminds us that even the greatest scientific discoveries are made by humans—with all their brilliance, ambition, and imperfections.</p>
+  `,
+        },
+        dark: {
+          k: "Programming · Jan 2026 · 5 min read · Writtin By Priyanka Jain ",
+          t: "GitHub × Hack Club: Why <em>Flavortown</em> Is the Most Important Event for Teen Developers",
+          b: `
+    <p>If you're a high school student who loves building websites, apps, hardware, or open-source projects, <strong>Flavortown</strong> is one of the most exciting opportunities available today. Created by <strong>GitHub</strong> and <strong>Hack Club</strong>, the program rewards teenagers for doing what they already enjoy—building projects.</p>
+
+    <blockquote>Build a project. Share it. Earn prizes.</blockquote>
+
+    <p>Unlike traditional competitions, Flavortown isn't about beating other participants. You work at your own pace, publish open-source projects, earn reward points called <strong>Cookies</strong>, and exchange them for real prizes.</p>
+
+    <h3>What Makes It Special?</h3>
+
+    <p>The event combines coding, creativity, and community into a single experience. Whether you're developing a website, a mobile app, a game, or even an Arduino project, your work can earn rewards while helping you improve your technical skills.</p>
+
+    <div class="sb">· · ·</div>
+
+    <h3>The Prize System</h3>
+
+    <p>Participants collect <strong>Cookies</strong> by creating and sharing projects. These points can be exchanged for prizes ranging from stickers to premium hardware.</p>
+
+    <ul>
+      <li>Stickers</li>
+      <li>CMF Buds 2 Plus</li>
+      <li>Bambu Lab A1 Mini 3D Printer</li>
+      <li>MacBook Air</li>
+      <li>iPads, laptops, gaming accessories, and many more rewards</li>
+    </ul>
+
+    <p>The exact number of Cookies depends on your project's quality, originality, documentation, and community engagement—not simply the number of hours you spend coding.</p>
+
+    <blockquote>It's not about coding longer. It's about building something people genuinely enjoy using.</blockquote>
+
+    <h3>Who Can Join?</h3>
+
+    <p>Flavortown is open to students between <strong>13 and 18 years old</strong>. If you're older, you can still contribute by mentoring younger developers and supporting the community.</p>
+
+    <h3>What Can You Build?</h3>
+
+    <p>Almost any technical open-source project is welcome, including:</p>
+
+    <ul>
+      <li>Websites and web applications</li>
+      <li>Games</li>
+      <li>Mobile applications</li>
+      <li>Arduino and Raspberry Pi projects</li>
+      <li>Automation tools and bots</li>
+      <li>Machine learning or data visualization projects</li>
+      <li>Creative coding projects</li>
+    </ul>
+
+    <div class="sb">· · ·</div>
+
+    <h3>How It Works</h3>
+
+    <p><strong>1. Build</strong> a project you're proud of.</p>
+
+    <p><strong>2. Publish</strong> it as an open-source repository and share it with the community.</p>
+
+    <p><strong>3. Earn Cookies</strong> based on engagement and exchange them for prizes.</p>
+
+    <h3>More Than Just Rewards</h3>
+
+    <p>Beyond the prizes, Flavortown teaches valuable real-world skills. Participants learn how to finish projects, write documentation, collaborate through GitHub, and contribute to open source—all while building an impressive portfolio.</p>
+
+    <blockquote>The best prize isn't the MacBook. It's the experience you gain by shipping real projects.</blockquote>
+
+    <p>Whether you're an experienced developer or just beginning your programming journey, Flavortown is one of the best opportunities to practice your skills, meet other makers, and build something meaningful.</p>
+  `,
+        },
+        future: {
+          k: "Physics · Jul 2026 · 5 min read",
+          t: "Why Electrons Don't Orbit the Nucleus Like Planets",
+          b: `<p>One of the first models of the atom shows electrons orbiting the nucleus like tiny planets around the Sun. It's a useful picture for beginners, but it isn't how nature actually works. In reality, electrons don't follow neat circular paths, and understanding why opens the door to one of the biggest ideas in modern physics.</p>
+
+<p>According to classical physics, an electron moving in a circle is constantly accelerating. Any accelerating electric charge should emit electromagnetic radiation, losing energy as it moves. If that happened inside an atom, the electron would spiral into the nucleus in an incredibly short time.</p>
+
+<blockquote>If classical physics were completely correct, stable atoms couldn't exist.</blockquote>
+
+<p>Fortunately, atoms do exist. Every object around you is proof that something else is happening. The answer comes from quantum mechanics.</p>
+
+<h3>From Particles to Waves</h3>
+
+<p>In the early twentieth century, physicists discovered that electrons behave as both particles and waves. Instead of following a single path, an electron is described by a wavefunction—a mathematical object that tells us the probability of finding it in different locations.</p>
+
+<p>This wave-like behavior changes everything. Rather than orbiting the nucleus, the electron forms standing-wave patterns around it. Only certain wave patterns are stable, just as only certain standing waves can exist on a stretched string.</p>
+
+<blockquote>Electrons don't travel in fixed orbits. They occupy stable wave patterns called orbitals.</blockquote>
+
+<h3>Why Only Certain Energies?</h3>
+
+<p>Imagine plucking a guitar string. You can't create just any vibration. Only specific standing waves fit between the fixed ends of the string. The same idea applies inside an atom.</p>
+
+<p>The electron's wave must fit around the nucleus in a way that reinforces itself. If the wave doesn't match perfectly, it interferes destructively and disappears. Only particular wavelengths survive, and each wavelength corresponds to a specific energy.</p>
+
+<p>This is why atoms have discrete energy levels instead of a continuous range of energies.</p>
+
+<h3>The Uncertainty Principle</h3>
+
+<p>Another essential idea is Heisenberg's uncertainty principle. It states that it is impossible to know both the exact position and exact momentum of a particle at the same time.</p>
+
+<p>If an electron were confined exactly inside the nucleus, its uncertainty in momentum would become enormous, giving it an extremely large kinetic energy. Nature avoids this by allowing the electron's wavefunction to spread over a region around the nucleus.</p>
+
+<blockquote>The electron isn't avoiding the nucleus. It simply cannot exist as an infinitely localized particle.</blockquote>
+
+<h3>What Is an Orbital?</h3>
+
+<p>An orbital is not a path. It is a three-dimensional region where there is a high probability of finding an electron. Different orbitals have different shapes, including spherical, dumbbell-shaped, and more complex forms.</p>
+
+<p>When textbooks draw fuzzy clouds around atoms, they are showing probability distributions rather than tiny objects moving along tracks.</p>
+
+<h3>Why This Matters</h3>
+
+<p>This simple idea explains an enormous amount of chemistry and physics. The arrangement of electrons determines how atoms bond, why elements have different properties, why solids conduct electricity, and even why stars produce light.</p>
+
+<p>Without quantum orbitals, molecules could not form, chemistry would not exist, and life itself would be impossible.</p>
+
+<blockquote>The stability of every atom in the universe depends on quantum mechanics—not classical orbits.</blockquote>
+
+<h3>Key Takeaways</h3>
+
+<ul>
+<li>Electrons do not orbit the nucleus like planets.</li>
+<li>Classical physics predicts that atoms should collapse.</li>
+<li>Quantum mechanics describes electrons as wavefunctions.</li>
+<li>Only specific standing-wave patterns are stable.</li>
+<li>These stable patterns create discrete energy levels called orbitals.</li>
+<li>The uncertainty principle helps explain why electrons cannot collapse into the nucleus.</li>
+</ul>
+
+<p>The next time you see the familiar picture of electrons circling a nucleus, remember that it is only a simplified model. The real atom is far more fascinating: a world where matter behaves like waves, probabilities replace certainty, and the structure of everything around us emerges from the rules of quantum mechanics.</p>`,
+        },
+        slow: {
+          k: "Web Development · Jul 2026 · 6 min read",
+          t: "From Flat Pages to Interactive Worlds: <em>Three.js</em>",
+          b: `<p>There was a time when websites were expected to do one thing: display information. A clean layout, readable text, and maybe a few animations were enough to create a good experience. Today, expectations are different. Users interact with products before buying them, explore virtual environments inside their browser, and scroll through portfolios that feel closer to video games than traditional websites.</p>
+
+<p>Many of these experiences have one thing in common: they're built with <strong>Three.js</strong>.</p>
+
+<p>If you've ever wondered how developers create floating planets, interactive product viewers, or animated backgrounds that respond to your mouse movement, chances are Three.js is doing the heavy lifting behind the scenes.</p>
+
+<h3>So, What Exactly Is Three.js?</h3>
+
+<p>Three.js is an open-source JavaScript library that makes creating 3D graphics for the web much more approachable. Under the hood, it uses WebGL, the browser's graphics API that communicates directly with your computer's GPU. Writing raw WebGL code can quickly become overwhelming, even for experienced developers. Three.js removes much of that complexity by providing simple, readable tools for building 3D scenes.</p>
+
+<blockquote>Instead of worrying about thousands of low-level graphics commands, you can focus on building the experience you want users to see.</blockquote>
+
+<p>That's one of the biggest reasons why it has become the industry standard for browser-based 3D development.</p>
+
+<h3>Every Scene Starts the Same Way</h3>
+
+<p>No matter how complex a project becomes, every Three.js application begins with three core components: a scene, a camera, and a renderer.</p>
+
+<p>The scene acts as the world that contains everything. Every model, light source, particle effect, and animation lives inside it.</p>
+
+<p>The camera decides what the user can actually see. Moving the camera changes the perspective without changing the objects themselves, just like filming a movie.</p>
+
+<p>Finally, the renderer draws the entire scene onto a canvas element inside the browser. It continuously calculates lighting, shadows, materials, and camera position to generate each frame you see on the screen.</p>
+
+<p>Once you understand these three objects, the rest of Three.js starts making much more sense.</p>
+
+<h3>Building Objects</h3>
+
+<p>The first thing most developers create is a simple cube. While it looks basic, that cube introduces one of the most important ideas in computer graphics.</p>
+
+<p>An object is made from two parts: geometry and material.</p>
+
+<p>Geometry defines the shape — whether it's a cube, sphere, cylinder, or something much more complex. Material determines how that shape should look. It controls color, metalness, roughness, transparency, reflections, and many other visual properties.</p>
+
+<blockquote>A mesh is simply geometry combined with a material.</blockquote>
+
+<p>Almost every visible object in a Three.js scene is built from this simple combination.</p>
+
+<h3>Why Lighting Changes Everything</h3>
+
+<p>Without lighting, every object looks flat and unrealistic.</p>
+
+<p>Adding even a single directional light immediately gives depth to a scene. Shadows appear, reflections become visible, and surfaces begin to feel physical rather than artificial.</p>
+
+<p>Three.js includes several lighting models for different situations. Ambient lights brighten everything equally, directional lights simulate sunlight, point lights behave like light bulbs, while spotlights create focused beams similar to stage lighting.</p>
+
+<p>Choosing the right lighting often has a greater impact than adding more detailed models.</p>
+
+<h3>Animation Makes a Scene Feel Alive</h3>
+
+<p>Static objects rarely capture attention for long. Motion is what transforms a collection of 3D models into an interactive experience.</p>
+
+<p>Most Three.js animations rely on the browser's <code>requestAnimationFrame()</code> function, which updates the scene roughly sixty times every second. During each frame, object positions can change, cameras can move, lights can rotate, and physics simulations can be updated before rendering the next image.</p>
+
+<p>Although this process sounds complicated, it follows the same simple loop from beginning to end.</p>
+
+<blockquote>Update the scene. Render the frame. Repeat.</blockquote>
+
+<p>Everything from spinning logos to realistic solar systems follows this principle.</p>
+
+<h3>Working with Real Models</h3>
+
+<p>Modern websites rarely build every object using cubes and spheres. Instead, developers import professional models created in software like Blender.</p>
+
+<p>The most common format today is GLTF or its binary version, GLB. These formats preserve materials, textures, animations, and even skeletal rigs, making it possible to move assets from 3D software directly into the browser with very little extra work.</p>
+
+<p>This workflow is one of the reasons why Three.js has become so popular among designers as well as developers.</p>
+
+<h3>Performance Isn't Optional</h3>
+
+<p>Rendering beautiful graphics is exciting, but performance always comes first.</p>
+
+<p>Every object, texture, and light increases the amount of work your user's GPU needs to perform. As scenes become larger, frame rates can quickly begin to drop.</p>
+
+<p>Developers solve this by compressing textures, reducing polygon counts, loading assets only when needed, and rendering only the objects visible to the camera. Small optimizations often have a much bigger impact than buying faster hardware.</p>
+
+<p>A smooth experience almost always feels more impressive than a highly detailed scene running at low frame rates.</p>
+
+<h3>Where You'll Find Three.js</h3>
+
+<p>Three.js appears in more places than many people realize.</p>
+
+<p>Interactive portfolios use it to create memorable landing pages. Online stores allow customers to rotate products before purchasing them. Architects present buildings before construction begins. Scientists visualize complex data sets, while educators use 3D simulations to explain difficult concepts.</p>
+
+<p>Even companies that don't advertise their use of Three.js often rely on it for marketing pages and product launches because it creates experiences that are difficult to achieve with traditional HTML and CSS alone.</p>
+
+<h3>Should You Learn It?</h3>
+
+<p>If you're already comfortable with JavaScript, learning Three.js is one of the most rewarding ways to expand your skills.</p>
+
+<p>It introduces concepts from computer graphics without requiring a background in game development. Along the way, you'll naturally learn about cameras, vectors, matrices, lighting models, shaders, textures, and rendering pipelines — topics that once seemed limited to graphics programmers.</p>
+
+<p>More importantly, it changes how you think about building websites. Instead of arranging elements on a flat page, you begin designing interactive spaces that users can explore.</p>
+
+<blockquote>The web is no longer limited to two dimensions. With libraries like Three.js, every browser can become a window into a fully interactive world.</blockquote>
+
+<h3>Final Thoughts</h3>
+
+<p>Three.js isn't just another JavaScript library. It represents a different way of thinking about web development. Whether you're creating an immersive portfolio, a scientific visualization, or simply experimenting with your first rotating cube, every project teaches something new about graphics, mathematics, and user experience.</p>
+
+<p>The first scene you build will probably be simple. The second will look better. By the tenth, you'll realize you're no longer designing pages—you’re building worlds.</p>`,
+        },
+      };
+
+      // Hero
+      const tl = gsap.timeline({ delay: 0.1 });
+      tl.to("#hk", { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 0)
+        .to(
+          "#ht",
+          { opacity: 1, y: 0, duration: 0.65, ease: "power2.out" },
+          0.1,
+        )
+        .to(
+          "#hd",
+          { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" },
+          0.22,
+        )
+        .to(
+          "#ha",
+          { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" },
+          0.32,
+        )
+        .to(
+          "#hc",
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          0.18,
+        );
+
+      // Reveals
+      gsap.utils.toArray(".reveal").forEach((el) => {
+        gsap.to(el, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          scrollTrigger: { trigger: el, start: "top 91%", once: true },
+        });
+      });
+
+      // Essay stagger
+      gsap.utils.toArray(".essay-item").forEach((el, i) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 12 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.45,
+            ease: "power2.out",
+            delay: i * 0.06,
+            scrollTrigger: { trigger: el, start: "top 93%", once: true },
+          },
+        );
+      });
+
+      // Modal
+      function openArticle(key) {
+        const a = articles[key];
+        if (!a) return;
+        document.getElementById("modal-body").innerHTML =
+          `<div class="modal-kicker">${a.k}</div><h1 class="modal-title">${a.t}</h1><div class="modal-content">${a.b}</div>`;
+        const m = document.getElementById("modal");
+        m.scrollTop = 0;
+        m.classList.add("open");
+        document.body.style.overflow = "hidden";
+        m.addEventListener("scroll", updateRP);
+      }
+      function closeArticle() {
+        document.getElementById("modal").classList.remove("open");
+        document.body.style.overflow = "";
+        document.getElementById("rp").style.width = "0%";
+      }
+      function updateRP() {
+        const m = document.getElementById("modal");
+        document.getElementById("rp").style.width =
+          (m.scrollTop / (m.scrollHeight - m.clientHeight)) * 100 + "%";
+      }
+      function shareArticle() {
+        const btn = document.getElementById("share-btn");
+        if (navigator.share) {
+          navigator.share({ title: "Mahmoud Gouda", url: location.href });
+        } else {
+          navigator.clipboard?.writeText(location.href);
+          btn.textContent = "Copied!";
+          setTimeout(() => (btn.textContent = "Share"), 2000);
+        }
+      }
+
+      // Prevent default on links
+      document
+        .querySelectorAll(".essay-item")
+        .forEach((el) =>
+          el.addEventListener("click", (e) => e.preventDefault()),
+        );
+      document
+        .querySelectorAll(".hc-title, .hc-read")
+        .forEach((el) =>
+          el.addEventListener("click", (e) => e.preventDefault()),
+        );
+
+
+
+
+    </script>
+  </body>
+</html>
