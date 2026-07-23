@@ -800,58 +800,24 @@
       });
 
 
-      const quotes = [
-        {
-          quote: "What I cannot create, I do not understand.",
-          author: "Richard Feynman"
-        },
-        {
-          quote: "The important thing is not to stop questioning.",
-          author: "Albert Einstein"
-        },
-        {
-          quote: "Somewhere, something incredible is waiting to be known.",
-          author: "Carl Sagan"
-        },
-        {
-          quote: "Nature uses only the longest threads to weave her patterns.",
-          author: "Richard Feynman"
-        },
-        {
-          quote: "Talk is cheap. Show me the code.",
-          author: "Linus Torvalds"
-        },
-        {
-          quote: "Programs must be written for people to read, and only incidentally for machines to execute.",
-          author: "Harold Abelson"
-        },
-        {
-          quote: "Simplicity is prerequisite for reliability.",
-          author: "Edsger W. Dijkstra"
-        },
-        {
-          quote: "Science is what we understand well enough to explain to a computer. Art is everything else.",
-          author: "Donald Knuth"
-        },
-        {
-          quote: "Mathematics is the language in which God has written the universe.",
-          author: "Galileo Galilei"
-        },
-        {
-          quote: "The essence of mathematics is not to make simple things complicated, but to make complicated things simple.",
-          author: "Stan Gudder"
-        },
-        {
-          quote: "Mathematics is the queen of the sciences.",
-          author: "Carl Friedrich Gauss"
-        },
-        {
-          quote: "The miracle of the appropriateness of the language of mathematics for the formulation of the laws of physics is a wonderful gift which we neither understand nor deserve.",
-          author: "Eugene Wigner"
+      const quoteElement = document.getElementById("quote");
+      const authorElement = document.getElementById("author");
+      async function loadQuote() {
+        try {
+          const response = await fetch("https://dummyjson.com/quotes/random");
+          if (!response.ok) {
+            throw new Error(`HTTP Error: ${response.status}`);
+          }
+          const data = await response.json();
+          quoteElement.textContent = `"${data.quote}"`;
+          authorElement.textContent = `— ${data.author}`;
+        } catch (error) {
+          console.error(error);
+          quoteElement.textContent = "Unable to load today's quote.";
+          authorElement.textContent = "";
         }
-
-      ]
-
+      }
+      loadQuote();
     </script>
 
 
