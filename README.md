@@ -18,7 +18,7 @@ Welcome to my Blog - my corner. Here is where I share the articles I wrote and s
 
  Clone the repository.
    ```bash
-   git clone https://github.com/yourusername/my-blog.git
+   git clone https://github.com/mahmoudgouda419/myblog.git
 ```
 
 Feel free to clone this project, customize it, and make it your own. Contributions and ideas are always welcome!
