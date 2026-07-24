@@ -23,6 +23,7 @@
           <a class="nav-link" href="#essays">Articles</a>
           <a class="nav-link" href="#about">About</a>
           <a class="nav-link" href="#roadmap">Writing tips</a>
+          <a class="nav-link" href="#qod">QOD</a>
           <button id="theme-toggle" class="theme-toggle">
             <i class="fa-solid fa-sun"></i>
           </button>
@@ -41,7 +42,7 @@
           I don't promise answers. Only an honest look into what's on my mind.
         </p>
         <div class="hero-actions" id="ha">
-          <a class="btn-primary" href="#essays">Read</a>
+          <a class="btn-primary" href="#roadmap">Learn How To Write</a>
           <a class="btn-text" href="#about">About me</a>
         </div>
       </div>
@@ -276,8 +277,8 @@
       </div>
     </div>
 
-    <section class="quote-section">
-      <p class="quote-label">Quote of the Day</p>
+    <section class="quote-section" id = "qod">
+      <p class="quote-label">Quote of the Day (QOD)</p>
       <blockquote id="quote">
         Loading quote...
       </blockquote>
@@ -294,7 +295,7 @@
           </h2>
 
           <p class="reveal">
-            I'm a STEM student, web developer, and physics enthusiast who enjoys
+            I'm a STEM student, web developer, and physics junior scientist :) who enjoys
             building projects that combine creativity with technology.
           </p>
 
@@ -798,8 +799,6 @@
           scrub: true
         }
       });
-
-
       const quoteElement = document.getElementById("quote");
       const authorElement = document.getElementById("author");
       async function loadQuote() {
@@ -810,7 +809,7 @@
           }
           const data = await response.json();
           quoteElement.textContent = `"${data.quote}"`;
-          authorElement.textContent = `— ${data.author}`;
+          authorElement.textContent = `${data.author}`;
         } catch (error) {
           console.error(error);
           quoteElement.textContent = "Unable to load today's quote.";
@@ -819,8 +818,5 @@
       }
       loadQuote();
     </script>
-
-
-
   </body>
 </html>
